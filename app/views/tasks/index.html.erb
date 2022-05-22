@@ -1,0 +1,10 @@
+<h1>My Taks</h1>
+<div class="container">
+  <ul class="unorded-list">
+    <% @tasks.each do |task| %>
+    <li class="single-task"> <%= link_to task.title, task_path(task) %> </li>
+    <%= link_to "Delete this task", task_path(task), method: :delete, data: { confirm: "are you sure you want to delete"} %>
+    <% end  %>
+  </ul>
+  <%= link_to "add a new task", tasks_new_path %>
+</div>
