@@ -25,6 +25,8 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  #je rajoute du code
+
   def update
     @task = Task.find(params[:id])
     @task.update(task_params)
